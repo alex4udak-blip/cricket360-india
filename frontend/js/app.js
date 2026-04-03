@@ -1,4 +1,4 @@
-const API_BASE = window.__API_BASE || 'https://cricket360-india-g9380f.saturn.ac';
+const API_BASE = window.__API_BASE || '';
 
 function esc(s){return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;');}
 

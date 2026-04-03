@@ -1,0 +1,43 @@
+version: '3.8'
+
+services:
+  db:
+    image: postgres:16-alpine
+    restart: always
+    environment:
+      POSTGRES_DB: cricket360
+      POSTGRES_USER: cricket360
+      POSTGRES_PASSWORD: cr1ck3t360_db
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U cricket360"]
+      interval: 5s
+      timeout: 3s
+      retries: 5
+
+  backend:
+    build: ./backend
+    restart: always
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      PORT: "3000"
+      DATABASE_URL: "postgresql://cricket360:cr1ck3t360_db@db:5432/cricket360"
+      CRICAPI_KEY: "a8c4dfe4-4ac9-4c88-bf2f-8f020fae66f1"
+      NODE_ENV: production
+    ports:
+      - "3000:3000"
+
+  frontend:
+    build: ./frontend
+    restart: always
+    depends_on:
+      - backend
+    ports:
+      - "80:80"
+      - "443:443"
+
+volumes:
+  pgdata:
