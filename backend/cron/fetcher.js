@@ -1,16 +1,17 @@
 const cron = require('node-cron');
-const { fetchNews, fetchMatches } = require('../services/cricapi');
+const { fetchMatches } = require('../services/cricapi');
+const { fetchRSSNews } = require('../services/rss');
 const { cacheNews, cacheMatches } = require('../services/cache');
 
 function startCronJobs() {
-  // News: every 5 minutes
+  // News via RSS: every 5 minutes
   cron.schedule('*/5 * * * *', async () => {
     try {
-      const news = await fetchNews();
+      const news = await fetchRSSNews();
       const count = await cacheNews(news);
-      console.log(`[cron] News fetched: ${count} items cached`);
+      console.log(`[cron] RSS news fetched: ${count} items cached`);
     } catch (err) {
-      console.error('[cron] News fetch failed:', err.message);
+      console.error('[cron] RSS news fetch failed:', err.message);
     }
   });
 
