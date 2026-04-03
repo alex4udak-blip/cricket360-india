@@ -37,16 +37,10 @@ async function cacheNews(newsArray) {
 }
 
 async function getNews(category = 'all', limit = 8) {
-  let query = 'SELECT * FROM news_cache';
-  const params = [];
-  if (category && category !== 'all') {
-    query += ' WHERE category = $1';
-    params.push(category);
-  }
-  query += ' ORDER BY pub_date DESC NULLS LAST, fetched_at DESC';
-  params.push(limit);
-  query += ` LIMIT $${params.length}`;
-  const { rows } = await pool.query(query, params);
+  const { rows } = await pool.query(
+    'SELECT * FROM news_cache ORDER BY pub_date DESC NULLS LAST, fetched_at DESC LIMIT $1',
+    [limit]
+  );
   return rows;
 }
 
