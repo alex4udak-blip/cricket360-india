@@ -1,0 +1,28 @@
+version: "1.0"
+
+services:
+  backend:
+    type: application
+    source: ./backend
+    build:
+      dockerfile: Dockerfile
+    env:
+      PORT: "3000"
+    ports:
+      - "3000"
+    health_check:
+      path: /api/health
+
+  frontend:
+    type: application
+    source: ./frontend
+    build:
+      dockerfile: Dockerfile
+    ports:
+      - "80"
+    depends_on:
+      - backend
+
+  database:
+    type: database
+    engine: postgres

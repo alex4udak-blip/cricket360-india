@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="hi-IN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IPL 2026 — क्रिकेट360•IN</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&family=Teko:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div id="header"></div>
+<div id="ticker"></div>
+<div id="statusbar"></div>
+
+<div class="wrap">
+<div class="grid">
+
+<div>
+  <div class="page-title">🏏 IPL 2026 — Season 19</div>
+  <div class="page-subtitle">TATA Indian Premier League • March 28 – May 25, 2026 • 74 Matches</div>
+
+  <div class="sh">📊 IPL 2026 Points Table</div>
+  <div class="iptbl-wrap">
+    <table class="ip">
+      <thead><tr><th>#</th><th>Team</th><th>M</th><th>W</th><th>L</th><th>NR</th><th>NRR</th><th>Pts</th></tr></thead>
+      <tbody>
+        <tr><td class="rk">1</td><td><span class="tp"><span class="td" style="background:#005DA0"></span>Mumbai Indians</span></td><td>2</td><td>2</td><td>0</td><td>0</td><td class="pos">+1.24</td><td class="pts">4</td></tr>
+        <tr><td class="rk">2</td><td><span class="tp"><span class="td" style="background:#EC1C24"></span>Royal Challengers Bengaluru</span></td><td>2</td><td>2</td><td>0</td><td>0</td><td class="pos">+1.08</td><td class="pts">4</td></tr>
+        <tr><td>3</td><td><span class="tp"><span class="td" style="background:#FF4E00"></span>Sunrisers Hyderabad</span></td><td>2</td><td>1</td><td>1</td><td>0</td><td class="pos">+0.45</td><td class="pts">2</td></tr>
+        <tr><td>4</td><td><span class="tp"><span class="td" style="background:#1C4B9C"></span>Rajasthan Royals</span></td><td>2</td><td>1</td><td>1</td><td>0</td><td class="pos">+0.22</td><td class="pts">2</td></tr>
+        <tr><td>5</td><td><span class="tp"><span class="td" style="background:#00BCD4"></span>Punjab Kings</span></td><td>1</td><td>1</td><td>0</td><td>0</td><td class="pos">+0.18</td><td class="pts">2</td></tr>
+        <tr><td>6</td><td><span class="tp"><span class="td" style="background:#F9CD05"></span>Chennai Super Kings</span></td><td>2</td><td>0</td><td>2</td><td>0</td><td class="neg">-0.88</td><td class="pts">0</td></tr>
+        <tr><td>7</td><td><span class="tp"><span class="td" style="background:#7960A8"></span>Kolkata Knight Riders</span></td><td>2</td><td>0</td><td>2</td><td>0</td><td class="neg">-1.12</td><td class="pts">0</td></tr>
+        <tr><td>8</td><td><span class="tp"><span class="td" style="background:#D4AF37"></span>Gujarat Titans</span></td><td>0</td><td>0</td><td>0</td><td>0</td><td>—</td><td class="pts">0</td></tr>
+        <tr><td>9</td><td><span class="tp"><span class="td" style="background:#E11D48"></span>Lucknow Super Giants</span></td><td>0</td><td>0</td><td>0</td><td>0</td><td>—</td><td class="pts">0</td></tr>
+        <tr><td>10</td><td><span class="tp"><span class="td" style="background:#0057A8"></span>Delhi Capitals</span></td><td>0</td><td>0</td><td>0</td><td>0</td><td>—</td><td class="pts">0</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="sh">🗞️ IPL News <small onclick="fetchNews('ipl')">↻ Refresh</small></div>
+  <div id="newsGrid" class="news-grid">
+    <div style="grid-column:1/-1"><div class="ld"><div class="spin"></div>IPL news aa rahi hai...</div></div>
+  </div>
+
+  <div class="sh" id="matchSH">📡 IPL Matches <small onclick="fetchMatches('ipl')">↻ Refresh</small></div>
+  <div id="matchWrap">
+    <div class="ld"><div class="spin"></div>IPL matches fetch ho rahe hain...</div>
+  </div>
+</div>
+
+<aside>
+  <div class="sw">
+    <div class="sw-ttl">🏏 IPL Teams 2026</div>
+    <div class="tr"><div class="tc" style="background:#001225;color:#005DA0;border-color:#005DA0">MI</div><div class="ti"><div class="tn">Mumbai Indians</div><div class="tc2">Rohit Sharma (C) • Wankhede</div></div><div class="tpts" style="color:#22c55e">4</div></div>
+    <div class="tr"><div class="tc" style="background:#1a0305;color:#EC1C24;border-color:#EC1C24">RCB</div><div class="ti"><div class="tn">Royal Challengers Bengaluru</div><div class="tc2">Virat Kohli (C) • Chinnaswamy</div></div><div class="tpts" style="color:#22c55e">4</div></div>
+    <div class="tr"><div class="tc" style="background:#120800;color:#FF4E00;border-color:#FF4E00">SRH</div><div class="ti"><div class="tn">Sunrisers Hyderabad</div><div class="tc2">Pat Cummins (C) • Rajiv Gandhi</div></div><div class="tpts" style="color:#fbbf24">2</div></div>
+    <div class="tr"><div class="tc" style="background:#050e22;color:#1C4B9C;border-color:#1C4B9C">RR</div><div class="ti"><div class="tn">Rajasthan Royals</div><div class="tc2">Sanju Samson (C) • SMS Stadium</div></div><div class="tpts" style="color:#fbbf24">2</div></div>
+    <div class="tr"><div class="tc" style="background:#00141a;color:#00BCD4;border-color:#00BCD4">PBKS</div><div class="ti"><div class="tn">Punjab Kings</div><div class="tc2">Shreyas Iyer (C) • Mullanpur</div></div><div class="tpts" style="color:#fbbf24">2</div></div>
+    <div class="tr"><div class="tc" style="background:#110e00;color:#F9CD05;border-color:#F9CD05">CSK</div><div class="ti"><div class="tn">Chennai Super Kings</div><div class="tc2">Ruturaj Gaikwad (C) • Chepauk</div></div><div class="tpts" style="color:#ef4444">0</div></div>
+    <div class="tr"><div class="tc" style="background:#0c0918;color:#7960A8;border-color:#7960A8">KKR</div><div class="ti"><div class="tn">Kolkata Knight Riders</div><div class="tc2">Ajinkya Rahane (C) • Eden Gardens</div></div><div class="tpts" style="color:#ef4444">0</div></div>
+    <div class="tr"><div class="tc" style="background:#0d0d00;color:#D4AF37;border-color:#D4AF37">GT</div><div class="ti"><div class="tn">Gujarat Titans</div><div class="tc2">Shubman Gill (C) • NM Stadium</div></div><div class="tpts" style="color:#4b5563">—</div></div>
+    <div class="tr"><div class="tc" style="background:#180008;color:#E11D48;border-color:#E11D48">LSG</div><div class="ti"><div class="tn">Lucknow Super Giants</div><div class="tc2">Rishabh Pant (C) • Ekana</div></div><div class="tpts" style="color:#4b5563">—</div></div>
+    <div class="tr"><div class="tc" style="background:#00061a;color:#0057A8;border-color:#0057A8">DC</div><div class="ti"><div class="tn">Delhi Capitals</div><div class="tc2">Axar Patel (C) • Arun Jaitley</div></div><div class="tpts" style="color:#4b5563">—</div></div>
+  </div>
+
+  <div class="sw">
+    <div class="sw-ttl">📈 IPL 2026 Stats</div>
+    <div class="sg">
+      <div class="sb"><div class="sbn">74</div><div class="sbl">Total Matches</div></div>
+      <div class="sb"><div class="sbn">10</div><div class="sbl">Teams</div></div>
+      <div class="sb"><div class="sbn">7</div><div class="sbl">Played</div></div>
+      <div class="sb"><div class="sbn">67</div><div class="sbl">Remaining</div></div>
+    </div>
+  </div>
+
+  <div class="sw">
+    <div class="sw-ttl">🔥 Orange Cap Race</div>
+    <div class="bz"><div class="bzn">01</div><div class="bzt"><b>Virat Kohli</b> (RCB) — 147 runs, 2 innings, Avg 73.50</div></div>
+    <div class="bz"><div class="bzn">02</div><div class="bzt"><b>Rohit Sharma</b> (MI) — 132 runs, 2 innings, Avg 66.00</div></div>
+    <div class="bz"><div class="bzn">03</div><div class="bzt"><b>Travis Head</b> (SRH) — 118 runs, 2 innings, SR 185.40</div></div>
+    <div class="bz"><div class="bzn">04</div><div class="bzt"><b>Sanju Samson</b> (RR) — 105 runs, 2 innings, Avg 52.50</div></div>
+    <div class="bz"><div class="bzn">05</div><div class="bzt"><b>Shubman Gill</b> (GT) — 98 runs, 2 innings, SR 148.20</div></div>
+  </div>
+
+  <div class="sw">
+    <div class="sw-ttl">💜 Purple Cap Race</div>
+    <div class="bz"><div class="bzn">01</div><div class="bzt"><b>Jasprit Bumrah</b> (MI) — 5 wickets, Econ 5.80</div></div>
+    <div class="bz"><div class="bzn">02</div><div class="bzt"><b>Varun Chakravarthy</b> (KKR) — 4 wickets, Econ 6.25</div></div>
+    <div class="bz"><div class="bzn">03</div><div class="bzt"><b>Mohammed Siraj</b> (RCB) — 4 wickets, Econ 7.10</div></div>
+    <div class="bz"><div class="bzn">04</div><div class="bzt"><b>Bhuvneshwar Kumar</b> (SRH) — 3 wickets, Econ 6.90</div></div>
+    <div class="bz"><div class="bzn">05</div><div class="bzt"><b>Rashid Khan</b> (GT) — 3 wickets, Econ 5.50</div></div>
+  </div>
+</aside>
+
+</div>
+</div>
+
+<div id="footer"></div>
+<div id="articleOverlay"></div>
+
+<script src="js/components.js"></script>
+<script src="js/clock.js"></script>
+<script src="js/article.js"></script>
+<script src="js/app.js"></script>
+<script>fetchNews('ipl');</script>
+</body>
+</html>

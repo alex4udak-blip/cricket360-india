@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="hi-IN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Team India — क्रिकेट360•IN</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&family=Teko:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div id="header"></div>
+<div id="ticker"></div>
+<div id="statusbar"></div>
+
+<div class="wrap">
+<div class="grid">
+
+<div>
+  <a class="hero" href="#" onclick="return false">
+    <img
+      src="https://images.unsplash.com/photo-1624526267942-ab0ff8a3e972?w=1200&q=85&auto=format&fit=crop"
+      alt="Team India"
+      onerror="this.src='https://images.unsplash.com/photo-1540747913346-19212a4b423e?w=1200&q=80&auto=format&fit=crop'"
+    />
+    <div class="hero-body">
+      <span class="badge bg">🇮🇳 TEAM INDIA</span>
+      <div class="hero-ttl">India — T20 World Champions 2026, ICC #1 Ranked T20I Team</div>
+      <div class="hero-meta"><b>Captain:</b> Suryakumar Yadav (T20I) &nbsp;•&nbsp; <b>Coach:</b> Gautam Gambhir &nbsp;•&nbsp; Back-to-Back T20 WC Titles</div>
+    </div>
+  </a>
+
+  <div class="sh">🗞️ India Cricket News <small onclick="fetchNews('india')">↻ Refresh</small></div>
+  <div id="newsGrid" class="news-grid">
+    <div style="grid-column:1/-1"><div class="ld"><div class="spin"></div>India news aa rahi hai...</div></div>
+  </div>
+
+  <div class="sh" id="matchSH">📡 India Matches <small onclick="fetchMatches('india')">↻ Refresh</small></div>
+  <div id="matchWrap">
+    <div class="ld"><div class="spin"></div>India matches fetch ho rahe hain...</div>
+  </div>
+
+  <div class="sh">🏆 India — Recent Series Results</div>
+  <div class="mc">
+    <div class="mc-status live"><span class="dlive"></span>CHAMPIONS</div>
+    <div class="teams-row">
+      <div class="tb"><div class="t-name">India</div><div class="t-score">T20 WC 2026</div></div>
+      <div class="vs-p">VS</div>
+      <div class="tb r"><div class="t-name">Sri Lanka</div><div class="t-score">Final</div></div>
+    </div>
+    <div class="mc-bottom">
+      <span class="mc-venue">📍 Ahmedabad • Mar 26, 2026</span>
+      <span class="mc-result">India won by 47 runs — CHAMPIONS!</span>
+    </div>
+  </div>
+  <div class="mc">
+    <div class="mc-status done">KHATAM</div>
+    <div class="teams-row">
+      <div class="tb"><div class="t-name">India</div><div class="t-score">2-1</div></div>
+      <div class="vs-p">VS</div>
+      <div class="tb r"><div class="t-name">England</div><div class="t-score">1-2</div></div>
+    </div>
+    <div class="mc-bottom">
+      <span class="mc-venue">📍 India • Feb 2026 • 3 ODI Series</span>
+      <span class="mc-result">India won series 2-1</span>
+    </div>
+  </div>
+  <div class="mc">
+    <div class="mc-status done">KHATAM</div>
+    <div class="teams-row">
+      <div class="tb"><div class="t-name">India</div><div class="t-score">3-1</div></div>
+      <div class="vs-p">VS</div>
+      <div class="tb r"><div class="t-name">England</div><div class="t-score">1-3</div></div>
+    </div>
+    <div class="mc-bottom">
+      <span class="mc-venue">📍 India • Feb 2026 • 5 T20I Series</span>
+      <span class="mc-result">India won series 3-1 (1 NR)</span>
+    </div>
+  </div>
+</div>
+
+<aside>
+  <div class="wc-box">
+    <div class="wc-ico">🇮🇳</div>
+    <div class="wc-ttl">INDIA — ICC Rankings</div>
+    <div class="wc-s">T20I: #1 • ODI: #2 • Test: #1</div>
+    <div class="wc-stars">★ ★ ★ ★</div>
+  </div>
+
+  <div class="sw">
+    <div class="sw-ttl">📆 Upcoming India Schedule</div>
+    <div class="sci"><div class="scd">Jun 6</div><div class="sct">India vs <b>Afghanistan</b> — Only Test, New Chandigarh</div></div>
+    <div class="sci"><div class="scd">Jun 14</div><div class="sct">India vs <b>Afghanistan</b> — 3 ODIs</div></div>
+    <div class="sci"><div class="scd">Jun 26</div><div class="sct">Ireland vs <b>India</b> — T20I Series, Belfast</div></div>
+    <div class="sci"><div class="scd">Sep 19</div><div class="sct">Asian Games 2026 — <b>Aichi, Japan</b></div></div>
+    <div class="sci"><div class="scd">Sep 27</div><div class="sct"><b>West Indies</b> India dauraa — 3 ODI + 5 T20I</div></div>
+    <div class="sci"><div class="scd">Dec</div><div class="sct"><b>Sri Lanka</b> India dauraa — 3 ODI + 3 T20I</div></div>
+    <div class="sci"><div class="scd">Jan '27</div><div class="sct">Border-Gavaskar Trophy — <b>IND vs AUS</b> 5 Tests</div></div>
+  </div>
+
+  <div class="sw">
+    <div class="sw-ttl">⭐ India Player Buzz</div>
+    <div class="bz"><div class="bzn">01</div><div class="bzt"><b>Suryakumar Yadav</b> — T20I Captain, WC 2026 Player of Tournament, 67*(38) in Final</div></div>
+    <div class="bz"><div class="bzn">02</div><div class="bzt"><b>Virat Kohli</b> — 83 centuries, all-format legend, RCB mein IPL form outstanding</div></div>
+    <div class="bz"><div class="bzn">03</div><div class="bzt"><b>Jasprit Bumrah</b> — World's #1 T20I bowler, injury se wapas, lethal yorkers</div></div>
+    <div class="bz"><div class="bzn">04</div><div class="bzt"><b>Rohit Sharma</b> — ODI/Test Captain, MI mein IPL form bhi jabardast</div></div>
+    <div class="bz"><div class="bzn">05</div><div class="bzt"><b>Yashasvi Jaiswal</b> — Young gun, Test opener sensation, 4 centuries in 2025-26</div></div>
+    <div class="bz"><div class="bzn">06</div><div class="bzt"><b>Varun Chakravarthy</b> — WC hero, mystery spinner, T20I mein 35+ wickets</div></div>
+  </div>
+
+  <div class="sw">
+    <div class="sw-ttl">📊 India Squad — T20I</div>
+    <div class="bz"><div class="bzn">C</div><div class="bzt"><b>Suryakumar Yadav</b> — Captain, #1 T20I batter</div></div>
+    <div class="bz"><div class="bzn">VC</div><div class="bzt"><b>Hardik Pandya</b> — Vice-Captain, all-rounder</div></div>
+    <div class="bz"><div class="bzn">WK</div><div class="bzt"><b>Sanju Samson</b> — Wicketkeeper, power hitter</div></div>
+    <div class="bz"><div class="bzn">P</div><div class="bzt"><b>Jasprit Bumrah</b> — Lead pacer, death overs specialist</div></div>
+    <div class="bz"><div class="bzn">S</div><div class="bzt"><b>Varun Chakravarthy</b> — Lead spinner, mystery bowler</div></div>
+  </div>
+</aside>
+
+</div>
+</div>
+
+<div id="footer"></div>
+<div id="articleOverlay"></div>
+
+<script src="js/components.js"></script>
+<script src="js/clock.js"></script>
+<script src="js/article.js"></script>
+<script src="js/app.js"></script>
+<script>fetchNews('india');</script>
+</body>
+</html>

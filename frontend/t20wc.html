@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="hi-IN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>T20 World Cup 2026 — क्रिकेट360•IN</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&family=Teko:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div id="header"></div>
+<div id="ticker"></div>
+<div id="statusbar"></div>
+
+<div class="wrap">
+<div class="grid">
+
+<div>
+  <a class="hero" href="#" onclick="return false">
+    <img
+      src="https://images.unsplash.com/photo-1531415074968-036ba1b575da?w=1200&q=85&auto=format&fit=crop"
+      alt="T20 World Cup 2026"
+      onerror="this.src='https://images.unsplash.com/photo-1540747913346-19212a4b423e?w=1200&q=80&auto=format&fit=crop'"
+    />
+    <div class="hero-body">
+      <span class="badge bg">🏆 INDIA CHAMPIONS 2026</span>
+      <div class="hero-ttl">ICC T20 World Cup 2026 — India ne Back-to-Back Title Jeeta! Ahmedabad mein Sri Lanka ko 47 runs se haraaya</div>
+      <div class="hero-meta"><b>Host:</b> India &amp; Sri Lanka &nbsp;•&nbsp; <b>Final:</b> March 26, 2026 &nbsp;•&nbsp; Narendra Modi Stadium, Ahmedabad</div>
+    </div>
+  </a>
+
+  <div class="sh">🏆 T20 WC 2026 — Final Scorecard</div>
+  <div class="mc">
+    <div class="mc-status live"><span class="dlive"></span>CHAMPIONS — FINAL</div>
+    <div class="teams-row">
+      <div class="tb"><div class="t-name">India</div><div class="t-score">189/4 (20.0)</div></div>
+      <div class="vs-p">VS</div>
+      <div class="tb r"><div class="t-name">Sri Lanka</div><div class="t-score">142/10 (18.2)</div></div>
+    </div>
+    <div class="mc-bottom">
+      <span class="mc-venue">📍 Narendra Modi Stadium, Ahmedabad • Mar 26</span>
+      <span class="mc-result">India won by 47 runs</span>
+    </div>
+  </div>
+
+  <div class="sh">⭐ Tournament Heroes</div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:26px">
+    <div class="mc" style="margin-bottom:0">
+      <div class="mc-status upcoming">PLAYER OF THE TOURNAMENT</div>
+      <div style="padding:6px 0">
+        <div class="t-name">Suryakumar Yadav</div>
+        <div class="t-score" style="margin-top:4px">324 runs • Avg 54.00 • SR 168.75</div>
+        <div class="t-score">67*(38) in Final vs Sri Lanka</div>
+      </div>
+    </div>
+    <div class="mc" style="margin-bottom:0">
+      <div class="mc-status upcoming">TOP WICKET-TAKER</div>
+      <div style="padding:6px 0">
+        <div class="t-name">Varun Chakravarthy</div>
+        <div class="t-score" style="margin-top:4px">16 wickets • Avg 12.50 • Econ 6.10</div>
+        <div class="t-score">4/28 in Final vs Sri Lanka</div>
+      </div>
+    </div>
+    <div class="mc" style="margin-bottom:0">
+      <div class="mc-status upcoming">TOP RUN-SCORER</div>
+      <div style="padding:6px 0">
+        <div class="t-name">Suryakumar Yadav</div>
+        <div class="t-score" style="margin-top:4px">324 runs • 7 innings • 2 fifties</div>
+        <div class="t-score">Best: 78*(42) vs England in Semi-Final</div>
+      </div>
+    </div>
+    <div class="mc" style="margin-bottom:0">
+      <div class="mc-status upcoming">BEST ECONOMY</div>
+      <div style="padding:6px 0">
+        <div class="t-name">Jasprit Bumrah</div>
+        <div class="t-score" style="margin-top:4px">12 wickets • Econ 5.40 • Avg 14.20</div>
+        <div class="t-score">Yorker specialist, death overs king</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sh">📊 Semi-Final Results</div>
+  <div class="mc">
+    <div class="mc-status done">SEMI-FINAL 1</div>
+    <div class="teams-row">
+      <div class="tb"><div class="t-name">India</div><div class="t-score">196/3 (20.0)</div></div>
+      <div class="vs-p">VS</div>
+      <div class="tb r"><div class="t-name">England</div><div class="t-score">164/8 (20.0)</div></div>
+    </div>
+    <div class="mc-bottom">
+      <span class="mc-venue">📍 Colombo • Mar 23</span>
+      <span class="mc-result">India won by 32 runs</span>
+    </div>
+  </div>
+  <div class="mc">
+    <div class="mc-status done">SEMI-FINAL 2</div>
+    <div class="teams-row">
+      <div class="tb"><div class="t-name">Sri Lanka</div><div class="t-score">178/5 (20.0)</div></div>
+      <div class="vs-p">VS</div>
+      <div class="tb r"><div class="t-name">Australia</div><div class="t-score">170/7 (20.0)</div></div>
+    </div>
+    <div class="mc-bottom">
+      <span class="mc-venue">📍 Colombo • Mar 24</span>
+      <span class="mc-result">Sri Lanka won by 8 runs</span>
+    </div>
+  </div>
+
+  <div class="sh">🗞️ T20 WC News <small onclick="fetchNews('t20wc')">↻ Refresh</small></div>
+  <div id="newsGrid" class="news-grid">
+    <div style="grid-column:1/-1"><div class="ld"><div class="spin"></div>WC news aa rahi hai...</div></div>
+  </div>
+</div>
+
+<aside>
+  <div class="wc-box">
+    <div class="wc-ico">🏆</div>
+    <div class="wc-ttl">INDIA — T20 WORLD CHAMPIONS 2026!</div>
+    <div class="wc-s">Back-to-Back Title • Ahmedabad</div>
+    <div class="wc-s" style="margin-top:3px">Sri Lanka ko 47 runs se haraaya</div>
+    <div class="wc-stars">★ ★ ★ ★</div>
+  </div>
+
+  <div class="sg">
+    <div class="sb"><div class="sbn">16</div><div class="sbl">Teams</div></div>
+    <div class="sb"><div class="sbn">45</div><div class="sbl">Matches</div></div>
+    <div class="sb"><div class="sbn">2</div><div class="sbl">Host Nations</div></div>
+    <div class="sb"><div class="sbn">8</div><div class="sbl">Venues</div></div>
+  </div>
+
+  <div class="sw">
+    <div class="sw-ttl">🏆 T20 WC Winners History</div>
+    <div class="bz"><div class="bzn">26</div><div class="bzt"><b>India</b> — beat Sri Lanka by 47 runs, Ahmedabad</div></div>
+    <div class="bz"><div class="bzn">24</div><div class="bzt"><b>India</b> — beat South Africa by 7 runs, Barbados</div></div>
+    <div class="bz"><div class="bzn">22</div><div class="bzt"><b>England</b> — beat Pakistan by 5 wickets, MCG</div></div>
+    <div class="bz"><div class="bzn">21</div><div class="bzt"><b>Australia</b> — beat New Zealand by 8 wickets, Dubai</div></div>
+    <div class="bz"><div class="bzn">16</div><div class="bzt"><b>West Indies</b> — beat England by 4 wickets, Kolkata</div></div>
+    <div class="bz"><div class="bzn">14</div><div class="bzt"><b>Sri Lanka</b> — beat India by 6 wickets, Dhaka</div></div>
+    <div class="bz"><div class="bzn">12</div><div class="bzt"><b>West Indies</b> — beat Sri Lanka by 36 runs, Colombo</div></div>
+    <div class="bz"><div class="bzn">10</div><div class="bzt"><b>England</b> — beat Australia by 7 wickets, Barbados</div></div>
+    <div class="bz"><div class="bzn">09</div><div class="bzt"><b>Pakistan</b> — beat Sri Lanka by 8 wickets, Lord's</div></div>
+    <div class="bz"><div class="bzn">07</div><div class="bzt"><b>India</b> — beat Pakistan by 5 runs, Johannesburg</div></div>
+  </div>
+
+  <div class="sw">
+    <div class="sw-ttl">📊 Final Group Standings</div>
+    <div class="bz"><div class="bzn">A</div><div class="bzt"><b>India</b> (8pts), England (6pts), Bangladesh (4pts), Oman (0pts)</div></div>
+    <div class="bz"><div class="bzn">B</div><div class="bzt"><b>Australia</b> (8pts), South Africa (6pts), West Indies (4pts), Scotland (0pts)</div></div>
+    <div class="bz"><div class="bzn">C</div><div class="bzt"><b>Sri Lanka</b> (8pts), Pakistan (4pts), New Zealand (4pts), Nepal (0pts)</div></div>
+    <div class="bz"><div class="bzn">D</div><div class="bzt"><b>England</b> (6pts), Afghanistan (6pts), Zimbabwe (2pts), USA (2pts)</div></div>
+  </div>
+</aside>
+
+</div>
+</div>
+
+<div id="footer"></div>
+<div id="articleOverlay"></div>
+
+<script src="js/components.js"></script>
+<script src="js/clock.js"></script>
+<script src="js/article.js"></script>
+<script src="js/app.js"></script>
+<script>fetchNews('t20wc');</script>
+</body>
+</html>
