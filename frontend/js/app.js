@@ -39,11 +39,11 @@ async function fetchNews(category='all', limit=8){
         </div>
       </div>`;
     }).join('');
-    g.addEventListener('click',function handler(e){
+    g.onclick=function(e){
       const card=e.target.closest('.ncard');if(!card)return;
       const url=card.dataset.url;const idx=+card.dataset.idx;
       if(url)window.open(url,'_blank','noopener');else if(typeof openArt==='function')openArt(idx);
-    },{once:true});
+    };
   }catch(e){
     g.innerHTML=`<div style="grid-column:1/-1"><div class="err"><strong>News load nahi hui</strong>${esc(e.message)}<br><button class="err-retry" onclick="fetchNews('${esc(category)}')">↻ Phir Try Karo</button></div></div>`;
   }
@@ -97,7 +97,7 @@ async function fetchMatches(filter='all'){
 }
 
 async function fetchStandings(){
-  const tbody=document.querySelector('table.ip tbody');
+  const tbody=document.getElementById('iplStandingsBody');
   if(!tbody)return;
   try{
     const r=await fetch(`${API_BASE}/api/standings`);
