@@ -1,6 +1,6 @@
 const { Router } = require('express');
 const { getNews, cacheNews } = require('../services/cache');
-const { fetchNews } = require('../services/cricapi');
+const { fetchRSSNews } = require('../services/rss');
 
 const router = Router();
 
@@ -11,15 +11,15 @@ router.get('/', async (req, res) => {
 
     let data = await getNews(category, limit);
 
-    // If cache empty, fetch from CricAPI immediately
+    // If cache empty, fetch from RSS immediately
     if (!data.length) {
-      console.log('[news] Cache empty, fetching from CricAPI...');
+      console.log('[news] Cache empty, fetching from RSS...');
       try {
-        const fresh = await fetchNews();
+        const fresh = await fetchRSSNews();
         await cacheNews(fresh);
         data = await getNews(category, limit);
       } catch (fetchErr) {
-        console.error('[news] CricAPI fetch failed:', fetchErr.message);
+        console.error('[news] RSS fetch failed:', fetchErr.message);
       }
     }
 
