@@ -110,16 +110,16 @@ async function getMatches(filter = 'all') {
 
 function getStandings() {
   return [
-    { pos: 1, team: 'Mumbai Indians', played: 6, won: 5, lost: 1, nrr: '+1.242', pts: 10 },
-    { pos: 2, team: 'Chennai Super Kings', played: 6, won: 4, lost: 2, nrr: '+0.873', pts: 8 },
-    { pos: 3, team: 'Royal Challengers Bengaluru', played: 6, won: 4, lost: 2, nrr: '+0.541', pts: 8 },
-    { pos: 4, team: 'Gujarat Titans', played: 6, won: 3, lost: 3, nrr: '+0.312', pts: 6 },
-    { pos: 5, team: 'Rajasthan Royals', played: 6, won: 3, lost: 3, nrr: '+0.104', pts: 6 },
-    { pos: 6, team: 'Kolkata Knight Riders', played: 6, won: 3, lost: 3, nrr: '-0.089', pts: 6 },
-    { pos: 7, team: 'Delhi Capitals', played: 6, won: 2, lost: 4, nrr: '-0.456', pts: 4 },
-    { pos: 8, team: 'Lucknow Super Giants', played: 6, won: 2, lost: 4, nrr: '-0.723', pts: 4 },
-    { pos: 9, team: 'Sunrisers Hyderabad', played: 6, won: 2, lost: 4, nrr: '-0.891', pts: 4 },
-    { pos: 10, team: 'Punjab Kings', played: 6, won: 1, lost: 5, nrr: '-1.134', pts: 2 },
+    { short: 'MI',   color: '#005DA0', m: 6, w: 5, l: 1, nrr: '+1.242', pts: 10 },
+    { short: 'CSK',  color: '#F9CD05', m: 6, w: 4, l: 2, nrr: '+0.873', pts: 8 },
+    { short: 'RCB',  color: '#EC1C24', m: 6, w: 4, l: 2, nrr: '+0.541', pts: 8 },
+    { short: 'GT',   color: '#D4AF37', m: 6, w: 3, l: 3, nrr: '+0.312', pts: 6 },
+    { short: 'RR',   color: '#1C4B9C', m: 6, w: 3, l: 3, nrr: '+0.104', pts: 6 },
+    { short: 'KKR',  color: '#7960A8', m: 6, w: 3, l: 3, nrr: '-0.089', pts: 6 },
+    { short: 'DC',   color: '#0057A8', m: 6, w: 2, l: 4, nrr: '-0.456', pts: 4 },
+    { short: 'LSG',  color: '#E11D48', m: 6, w: 2, l: 4, nrr: '-0.723', pts: 4 },
+    { short: 'SRH',  color: '#FF4E00', m: 6, w: 2, l: 4, nrr: '-0.891', pts: 4 },
+    { short: 'PBKS', color: '#00BCD4', m: 6, w: 1, l: 5, nrr: '-1.134', pts: 2 },
   ];
 }
 
