@@ -24,11 +24,11 @@ async function cacheNews(newsArray) {
         externalId,
         item.title,
         item.description || null,
-        item.image || item.imgUrl || null,
-        item.url || null,
-        item.source || null,
+        item.image_url || item.image || item.imgUrl || null,
+        item.source_url || item.url || null,
+        item.source_name || item.source || null,
         item.category || 'general',
-        item.pubDate || item.datePublished || null,
+        item.pub_date || item.pubDate || item.datePublished || null,
       ]
     );
     cached++;
